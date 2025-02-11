@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }    
 
-.top{
+.title {
     margin-bottom: 3rem;
     font-size: 2rem;
     color: #4dafb2;
@@ -21,9 +21,16 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+}
 
-
-.field {
+.blockField {
     height: 26rem;
     width: 26rem;
     background-color: #b2c0dc;
@@ -46,11 +53,11 @@ body {
     border-radius: 0.2rem;
 }
 
-.blocks {
+.blockSpawner {
     background-color: #db967c;
     border-radius: 0.5rem;
-    margin-top: 2rem;
-    width: 36rem;
-    height: 9rem;
-    margin-bottom: 1rem;
+    width: 15rem;
+    height: 28rem;
+    position: absolute;
+    left: 2rem;
 }
