@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}    
+
+.top{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.field {
+    height: 34rem;
+    width: 34rem;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+    grid-gap: 0.25rem;
+    padding: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.block {
+    background-color: aliceblue;
+    width: 4rem;
+    height: 4rem;
+    color: aliceblue;
+}
