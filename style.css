@@ -6,44 +6,76 @@ html, body{
 body {
     height: 100%;
     width: 100%;
-    background-color: blue;
+    background-color: #ebd8c2;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }    
 
-.top{
+.title {
     margin-bottom: 3rem;
     font-size: 2rem;
-    color: black;
+    color: #4dafb2;
+    font-size: 4rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.field {
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.blockField {
     height: 26rem;
     width: 26rem;
-    background-color: blueviolet;
+    background-color: #b2c0dc;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(3rem, 1fr));
-    grid-gap: 0.25rem;
-    grid-column-gap: 0.25;
+    gap: 0.25rem; 
+    grid-column-gap: 0.25; 
     padding: 1rem;
-    align-items: center;
-    justify-items: center;
+    border-radius: 0.4rem;
 }
 
 .block {
-    background-color: aliceblue;
+    background-color: #97adda;
     width: 3rem;
     height: 3rem;
     color: aliceblue;
+    border-radius: 0.2rem;
+} 
+
+.blockSpawner {
+    justify-content: center;
+    background-color: #db967c;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 28rem;
+    position: absolute;
+    left: 2rem;
 }
 
-.blocks{
-    background-color: aqua;
-    margin-top: 2rem;
-    width: 36rem;
-    height: 9rem;
-    margin-bottom: 1rem;
-}
+.t-shape {
+    display: grid;
+    grid-template-columns: repeat(3, 3rem);
+    grid-template-rows: repeat(2, 3rem);
+    gap: 4px;
+    width: fit-content;
+    z-index: 3;
+  }
+  .t-shape div {
+    border-radius: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: purple;
+  }
+  .t-shape .center {
+    grid-column: 2; 
+  }
+  
