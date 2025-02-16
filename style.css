@@ -41,6 +41,7 @@ body {
     grid-column-gap: 0.25; 
     padding: 1rem;
     border-radius: 0.4rem;
+    position: relative;
 }
 
 .block {
@@ -56,12 +57,23 @@ body {
     background-color: #db967c;
     border-radius: 0.5rem;
     width: 15rem;
-    height: 28rem;
+    height: 32rem;
     position: absolute;
     left: 2rem;
     display: flex;
     flex-direction: column;
     justify-items: center;
+    align-items: center ;
+}
+
+.figure {
+  margin: 1rem;
+}
+
+.figure .drag-area{
+  width: 100%;
+  height: 100%;
+  cursor: grab;
 }
 
 
@@ -72,30 +84,32 @@ body {
     gap: 4px;
     width: fit-content;
     z-index: 10; 
-    position: absolute;
   }
-  .t-shape div {
+  .t{
     border-radius: 0.2rem;
     width: 3rem;
     height: 3rem;
     background-color: purple;
   }
-  .t-shape .center {
+  .center {
+    border-radius: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: purple;
     grid-column: 2; 
   } 
   
   .l-shape {
     display: grid;
-    grid-template-columns: 3rem;  /* Один столбец */
+    grid-template-columns: 3rem 3rem;  /* Один столбец */
     grid-template-rows: 3rem 3rem 3rem;  /* Три строки */
     gap: 0.25rem;
     width: fit-content;
     grid-auto-flow: column;
     z-index: 10;
-    position: absolute;
   }
 
-.l-shape div {
+.l{
   border-radius: 0.2rem;
   width: 3rem;
     height: 3rem;
@@ -103,10 +117,14 @@ body {
 }
 
 /* Этот блок будет внизу и справа */
-.l-shape .corner {
+.corner {
     grid-row: 3;  /* Третий ряд (внизу) */
     grid-column: 2;  /* Во втором столбце (справа) */
-}
+    border-radius: 0.2rem;
+    width: 3rem;
+      height: 3rem;
+      background-color: orange;
+  }
 
 
 .o-shape {
@@ -116,18 +134,15 @@ body {
   gap: 0.25rem;
   width: fit-content;
   z-index: 10;
-  position: absolute;
 }
 
-.o-shape div {
+.o {
   border-radius: 0.2rem;
   width: 3rem;
   height: 3rem;
   background-color: blue;
 }
 
-.moved{
-  transform: translate(-3.25rem, -3.25rem) !important;
-}
+
 
 
